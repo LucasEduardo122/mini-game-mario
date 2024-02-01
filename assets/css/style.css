@@ -1,0 +1,110 @@
+.game {
+    border: 2px solid #000;
+    width: 900px;
+    height: 700px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(deepskyblue, white);
+    border-bottom: 20px solid green;
+}
+
+.mario {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    bottom: 0px;
+}
+
+.pipe {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    bottom: -4px;
+    right: -82px;
+}
+
+.start-game {
+    z-index: 50;
+    background-color: #0006;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+}
+
+.container-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-button > button {
+    background-color: red;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: absolute;
+    top: 290px;
+}
+
+.clouds {
+    position: absolute;
+    width: 550px;
+    right: -549px;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.gameover {
+    position: absolute;
+    width: 200px;
+    bottom: 210px;
+    left: 380px;
+    display: none;
+}
+
+@keyframes pipeMove {
+    from {
+        right: -82px;
+    }
+
+    to {
+        right: 902px;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0px;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+@keyframes cloudMove {
+    from {
+        right: -549px;
+    }
+
+    to {
+        right: 902px;
+    }
+}
